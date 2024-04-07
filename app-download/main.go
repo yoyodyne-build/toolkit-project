@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/yoyodyne-build/toolkit"
+	"github.com/yoyodyne-build/toolkit/v2"
 	"log"
 	"net/http"
 )
@@ -29,5 +29,5 @@ func routes() http.Handler {
 func downloadFile(w http.ResponseWriter, r *http.Request) {
 	var tools toolkit.Tools
 
-	tools.DownloadStaticFile(w, r, "./files", "tipfinger.jpg", "lulzjack.jpg")
+	tools.DownloadStaticFile(w, r, "./files/tipfinger.jpg", "lulzjack.jpg")
 }
